@@ -1,0 +1,8 @@
+package.json
+package-lock.json
+pnpm-lock.yaml
+README.md
+docs/**
+.github/**
+.vscode/**
+**/*.mdx

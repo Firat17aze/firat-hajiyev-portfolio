@@ -1,0 +1,33 @@
+---
+title: UDP Reliable Drone
+image: /projects/firat/udp-drone.jpg
+description: A custom binary telemetry and command protocol that layers reliability over lossy UDP for drone communication.
+startDate: 2026-01
+endDate: 2026-01
+techStack:
+  - C
+  - UDP
+  - CRC-8
+  - CMake
+  - Networking
+role: Independent Developer
+teamSize: 1
+githubUrl: https://github.com/Firat17aze/UDP-reliable-drone
+---
+
+## Overview
+
+UDP Reliable Drone simulates communication between a ground station and a drone, then adds the reliability primitives that raw UDP deliberately does not provide.
+
+## Engineering focus
+
+- Designed a compact binary protocol with magic bytes and sequence numbers.
+- Implemented CRC-8 checksums for payload integrity.
+- Added acknowledgments, retry logic, and configurable timeouts.
+- Modeled GPS, altitude, and battery telemetry.
+- Tested command delivery under simulated 30 percent packet loss.
+
+## Design takeaway
+
+The project makes the delivery and integrity tradeoffs visible: UDP stays lightweight, while the application protocol owns the reliability contract.
+

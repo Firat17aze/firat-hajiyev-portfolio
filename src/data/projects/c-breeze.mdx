@@ -1,0 +1,34 @@
+---
+title: C-Breeze
+image: /projects/firat/c-breeze.jpg
+description: Human-aware smart fan control combining AVR C firmware, OpenCV vision, ultrasonic sensing, and a live web dashboard.
+startDate: 2025-12
+endDate: 2026-01
+techStack:
+  - C
+  - AVR
+  - Python
+  - OpenCV
+  - UART
+  - WebSocket
+  - Node.js
+role: Independent Developer
+teamSize: 1
+githubUrl: https://github.com/Firat17aze/C-Breeze
+---
+
+## Overview
+
+C-Breeze is an autonomous IoT cooling system that activates a fan when a nearby person is detected. It connects computer vision on a laptop with an ATmega328P-based controller, ultrasonic proximity sensing, and a real-time browser dashboard.
+
+## Engineering focus
+
+- Built AVR C firmware to drive an L293D motor driver and read an HC-SR04 ultrasonic sensor.
+- Used an OpenCV vision process to identify a nearby person and send control signals over UART.
+- Added automatic and manual control modes, including a 50 cm proximity threshold and 5 cm hysteresis to avoid rapid fan switching.
+- Streamed distance, presence, fan state, and operating mode to a web dashboard through a Node.js and WebSocket backend.
+- Included timeout and serial-error handling so the system safely degrades if a sensor or camera connection fails.
+
+## System design
+
+The project keeps detection, control, and visualization separate: Python handles camera input, the AVR handles deterministic hardware control, and the web layer exposes status and manual commands. This makes the prototype easier to validate and extend without mixing real-time firmware concerns into the dashboard.

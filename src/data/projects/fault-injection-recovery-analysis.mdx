@@ -1,0 +1,32 @@
+---
+title: Fault Injection & Recovery
+image: /projects/firat/fault-recovery.jpg
+description: A watchdog-based ATmega328P reliability demo that injects faults and recovers from hangs and bit flips.
+startDate: 2026-01
+endDate: 2026-01
+techStack:
+  - C
+  - ATmega328P
+  - Watchdog Timer
+  - EEPROM
+  - Reliability
+role: Independent Developer
+teamSize: 1
+githubUrl: https://github.com/Firat17aze/Fault-Injection-Recovery-Analysis
+---
+
+## Overview
+
+Fault Injection & Recovery Analysis is a hands-on reliability project for ATmega328P systems. It deliberately introduces failures, then uses recovery mechanisms to show how embedded software can regain a known operating state.
+
+## Engineering focus
+
+- Injected hangs and bit flips to create repeatable fault scenarios.
+- Used watchdog monitoring to detect loss of forward progress.
+- Built custom low-level drivers around the recovery flow.
+- Treated fault handling as an observable system behavior rather than an afterthought.
+
+## Design takeaway
+
+Small devices still need resilience strategies. This project focuses on failure detection, controlled recovery, and clear system boundaries.
+

@@ -1,0 +1,33 @@
+---
+title: RotorGuard-F4
+image: /projects/firat/rotor-guard.jpg
+description: An edge AI workflow for classifying drone motor faults from IMU vibration data and exporting an INT8 model for STM32.
+startDate: 2026-03
+endDate: 2026-04
+techStack:
+  - C++
+  - Python
+  - STM32
+  - TensorFlow Lite
+  - Edge AI
+  - IMU
+role: Independent Developer
+teamSize: 1
+githubUrl: https://github.com/Firat17aze/RotorGuard-F4
+---
+
+## Overview
+
+RotorGuard-F4 explores an edge AI pipeline for drone motor-fault classification on STM32F446RE hardware. It moves from vibration data preparation through model evaluation and INT8 export for microcontroller deployment.
+
+## Engineering focus
+
+- Defined normal, prop-imbalance, and bearing-wear classes from IMU vibration data.
+- Built an end-to-end training and evaluation workflow for a 1D CNN.
+- Exported an INT8 TensorFlow Lite model and generated C/C++ model artifacts for firmware integration.
+- Included replay, parity, and benchmark stages to validate the pipeline.
+
+## Scope note
+
+The repository labels the firmware capture path as a starter stub and frames the work as bench-focused, not an in-flight safety system.
+

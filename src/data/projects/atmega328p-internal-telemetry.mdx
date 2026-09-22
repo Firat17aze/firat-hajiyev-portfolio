@@ -1,0 +1,32 @@
+---
+title: ATmega328P Internal Telemetry
+image: /projects/firat/telemetry.jpg
+description: Bare-metal monitoring of internal silicon temperature and voltage with Kalman filtering and a serial command interface.
+startDate: 2025-12
+endDate: 2026-01
+techStack:
+  - C
+  - AVR
+  - ADC
+  - UART
+  - Kalman Filtering
+role: Independent Developer
+teamSize: 1
+githubUrl: https://github.com/Firat17aze/atmega328p-internal-telemetry
+---
+
+## Overview
+
+This project reads the ATmega328P's internal temperature sensor and supply-voltage signals without relying on external sensor modules or Arduino libraries.
+
+## Engineering focus
+
+- Configured AVR ADC registers to access the internal temperature channel.
+- Measured supply voltage through the microcontroller's internal reference path.
+- Applied a Kalman filter to stabilize noisy readings.
+- Exposed device status through a 9600-baud UART command interface.
+
+## Design takeaway
+
+The project combines register-level peripheral control, filtering, and a practical diagnostic interface in a compact embedded system.
+

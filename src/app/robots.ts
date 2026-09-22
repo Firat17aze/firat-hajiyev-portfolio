@@ -1,0 +1,21 @@
+import { siteMetadata } from "@/data/metadata"
+import type { MetadataRoute } from "next"
+
+export const dynamic = "force-static"
+
+/**
+ * Generates a robots.txt file for the website.
+ * Allows all search engines to crawl and index the portfolio for maximum discoverability.
+ */
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/", "/_next/", "/private/"],
+      },
+    ],
+    sitemap: `${siteMetadata.siteUrl}/sitemap.xml`,
+  }
+}

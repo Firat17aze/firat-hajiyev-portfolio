@@ -1,0 +1,34 @@
+---
+title: SecureBoot-AVR
+image: /projects/firat/secure-boot.jpg
+description: A secure bootloader for ATmega328P that verifies firmware integrity and version before execution.
+startDate: 2026-01
+endDate: 2026-02
+techStack:
+  - C
+  - AVR
+  - CMake
+  - SHA-256
+  - UART
+  - EEPROM
+role: Independent Developer
+teamSize: 1
+githubUrl: https://github.com/Firat17aze/SecureBoot-AVR
+---
+
+## Overview
+
+SecureBoot-AVR is a bare-metal bootloader project for the ATmega328P. It establishes a verification step before application code runs, keeping the device in recovery mode when a firmware image does not pass validation.
+
+## Engineering focus
+
+- Defined a bootloader and application memory layout for an Arduino Uno-class device.
+- Added SHA-256 integrity checks and an Ed25519 verification interface for signed firmware.
+- Used EEPROM-backed counters for anti-rollback protection.
+- Included UART communication with CRC validation and a host-side firmware signing tool.
+- Kept the build portable with CMake and an AVR-GCC toolchain.
+
+## Scope note
+
+The repository documents its Ed25519 implementation as an integration placeholder. It is a learning-focused secure-boot architecture, not a production security claim.
+
